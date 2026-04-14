@@ -34,7 +34,6 @@
     </style>
 </head>
 <body>
-    <a href="{{ route('clientes.index') }}" class="btn btn-primary">Volver</a>
 
     <h1>Crear cliente</h1>
 

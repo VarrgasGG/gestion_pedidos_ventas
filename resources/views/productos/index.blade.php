@@ -56,7 +56,7 @@
 </head>
 <body>
 
-    <a href="{{ route('home') }}" class="btn">Inicio</a>
+    <a href="{{ route('dashboard') }}" class="btn">Inicio</a>
 
     <h1>Listado de productos</h1>
 

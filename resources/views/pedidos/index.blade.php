@@ -52,7 +52,7 @@
     </style>
 </head>
 <body>
-    <a href="{{ route('home') }}" class="btn btn-primary">Inicio</a>
+    <a href="{{ route('dashboard') }}" class="btn btn-primary">Inicio</a>
 
     <h1>Listado de pedidos</h1>
 
