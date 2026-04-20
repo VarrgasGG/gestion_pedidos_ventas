@@ -6,6 +6,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsuarioController;
 
 Route::get('/', function () {
     return redirect()->route('login.form');
@@ -22,4 +23,6 @@ Route::middleware('auth')->group(function (){
     Route::resource('clientes', ClienteController::class);
     Route::resource('productos', ProductoController::class);
     Route::resource('pedidos', PedidoController::class);
+    Route::get('/usuarios/crear', [UsuarioController::class, 'create'])->name('usuarios.create');
+    Route::post('/usuarios', [UsuarioController::class, 'store'])->name('usuarios.store');
 });

@@ -99,7 +99,10 @@ class PedidoController extends Controller
 
     public function update(Request $request, Pedido $pedido)
     {
-        //
+        if ($request->has('estado')) {
+        $pedido->update(['estado' => $request->estado]);
+        return redirect()->back()->with('success', 'Estado del pedido #' . $pedido->id . ' actualizado.');
+    }
     }
 
     public function destroy(Pedido $pedido)
