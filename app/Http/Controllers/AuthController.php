@@ -23,7 +23,7 @@ $request->session()->regenerate();
 return redirect()->route('dashboard')->with('success', 'Bienvenido al sistema');
 }
 return back()->withErrors([
-'email' => 'Las credenciales no son correctas o Usuario no registrado.',
+'email' => 'Las credenciales son incorrectas o Usuario no registrado.',
 ])->onlyInput('email');
 }
 public function dashboard()
